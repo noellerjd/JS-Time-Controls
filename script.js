@@ -1,6 +1,3 @@
-const clockBtn = document.getElementById("clock-btn");
-// const clockToggle = document.getElementsByClassName("clock");
-
 const clockAMPM = document.getElementById("AMPM");
 const clock24h = document.getElementById("24h");
 
@@ -37,7 +34,7 @@ function toggleAMPM() {
       let seconds = date.getSeconds();
       let ampm = "AM";
 
-      if ((hour) => 12) {
+      if ((hour) >= 12) {
         hour = hour - 12;
         ampm = "PM";
       }
