@@ -1,3 +1,5 @@
+const clockBtn = document.getElementById("clock-btn");
+
 const clockAMPM = document.getElementById("AMPM");
 const clock24h = document.getElementById("24h");
 
@@ -24,6 +26,8 @@ function currentDate() {
   }, 1000);
 }
 
+function hours12(date) { return (date.getHours() + 24) % 12 || 12; }
+
 // Time Toggles
 function toggleAMPM() {
   if (document.getElementById("time").className === "AMPM") {
@@ -32,12 +36,16 @@ function toggleAMPM() {
       let hour = date.getHours();
       let minute = date.getMinutes();
       let seconds = date.getSeconds();
-      let ampm = "AM";
-
-      if ((hour) > 12) {
-        hour = hour - 12;
-        ampm = "PM";
+      var ampm = "";
+      
+      // console.log(hour)
+      
+      if ((hour) > 11) {
+        var ampm = "PM";
+      } else if ((hour) < 12) {
+        var ampm = "AM";
       }
+
 
       if (minute < 10) {
         minute = "0" + minute;
@@ -48,7 +56,7 @@ function toggleAMPM() {
       }
 
       document.getElementById("time").innerHTML =
-        hour + ":" + minute + ":" + seconds + " " + ampm;
+        hours12(date) + ":" + minute + ":" + seconds + " " + ampm;
     }, 1000);
   }
   document.getElementById("time").className = "AMPM";
