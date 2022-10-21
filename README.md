@@ -1,5 +1,7 @@
 # JS-Time-Controls
 
+![image](https://user-images.githubusercontent.com/50307506/197104432-25221bff-ec64-4ab2-8bcb-4abf6bb67651.png)
+
 ## Description
 
 My motivation behind this project was to get some more experience using the built in Date function with Javascript.
