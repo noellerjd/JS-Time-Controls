@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --black: #0e1117;
+  --blue2: #5a629e;
+  --blue: #6a73b6;
+  --purple: #ccccff;
+  --white: #f8f8f8;
+}
+body {
+  background-image: url("https://live.staticflickr.com/1445/24691808910_0a04754507_b.jpg");
+  object-fit: fill;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body 
+/* Header */
+.nav {
+  background-color: var(--blue);
+  color: var(--black);
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.controls {
+  display: flex;
+  margin-left: 1%;
+  margin-top: 20px;
+  background-color: var(--white);
+  padding: 5px;
+  border-radius: 5px;
+  height: 80px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: min-content;
+}
+#clock-btn {
+  /* margin-bottom: 15px; */
+  background-color: var(--white);
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 5px;
+}
+#clock-btn:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+}
+#calender-btn {
+  /* margin-top: 15px; */
+  background-color: var(--white);
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 5px;
+}
+#calender-btn:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+}
+#clock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 5px;
+  transition: ease all 0.3s;
+  width: fit-content;
+  height: fit-content;
+  border: 3px solid var(--black);
+  box-shadow: 0px 5px 0px 1px var(--black);
+}
+#clock:hover {
+  box-shadow: 0px 5px 5px 1px var(--white);
+}
+#time {
+  display: flex;
+  justify-content: right;
+}
+#date {
+  display: flex;
+  justify-content: right;
+}
+#clock:hover {
+  background-color: var(--black);
+  color: white;
+  cursor: pointer;
+}
